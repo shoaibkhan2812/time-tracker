@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ACI-Container' }
+    agent { label 'ACI-Container' }  // This will run the below job in 'ACI-Container' label nodes.
     stages {
         stage('Build') {
             steps {
