@@ -1,5 +1,5 @@
 pipeline {
-    node ('ACI-Container') {
+    agent { label 'ACI-Container' }
     stages {
         stage('Build') {
             steps {
@@ -11,5 +11,4 @@ pipeline {
             }
         }
     }
-    }a
 }
