@@ -1,5 +1,6 @@
 pipeline {
-    agent { label 'ACI-Containers' }  // This will run the below job in 'ACI-Container' label nodes.
+    timeout(time: 3, unit: 'MINUTES') {
+        agent { label 'ACI-Container' } } // This will run the below job in 'ACI-Container' label nodes.
     stages {
         stage('Build') {
             steps {
